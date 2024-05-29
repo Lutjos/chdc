@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('rendez_vouses', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('patient_id')->constrained();
+            $table->foreignId('staff_medical_id')->constrained();
+            $table->string('motif');
+            $table->date('date_rdv');
             $table->timestamps();
         });
     }

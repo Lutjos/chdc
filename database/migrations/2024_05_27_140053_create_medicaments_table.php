@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('medicaments', function (Blueprint $table) {
             $table->id();
+            $table->string('intitule');
+            $table->date('date_expiration');
+            $table->string('statut');
             $table->timestamps();
         });
     }

@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('dossier_medicals', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('patient_id')->constrained();
+            $table->foreignId('consultation_id')->constrained();
+            $table->foreignId('hospitalisation_id')->constrained()->nullable();
+            $table->foreignId('rendez_vous_id')->constrained();
+            $table->foreignId('prescription_id')->constrained();
             $table->timestamps();
         });
     }
