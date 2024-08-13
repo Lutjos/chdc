@@ -1,14 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-// 
+//
 Route::get('/', \App\Livewire\Home\Home::class);
 
 
 Route::get('/dashboard',\App\Livewire\Dashboard::class);
 
-Route::get('/adminstration/assigne-roles',\App\Livewire\Admin\AssignRole::class);
+Route::get('/adminstration/utilisateurs/nouveau', \App\Livewire\Admin\FormAssignRole::class)
+->name('user.new');
+Route::get('/adminstration/utilisateurs/role', \App\Livewire\Admin\RoleListe::class)
+->name('user.roles');
 
+Route::get('/adminstration/utilisateurs',\App\Livewire\Admin\AssignRole::class)->name('user.list');
 
 
 
@@ -19,6 +23,6 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-   
-    
+
+
 });

@@ -1,6 +1,6 @@
 <nav
 id="page-sidebar"
-class="fixed bottom-0 start-0 top-0 z-50 flex h-full w-full border-slate-200/75 bg-white transition-transform duration-500 ease-out dark:border-slate-700/60 dark:bg-slate-900 sm:w-80 lg:translate-x-0 lg:shadow-none ltr:border-r ltr:lg:translate-x-0 rtl:border-l rtl:lg:translate-x-0"
+class="fixed top-0 bottom-0 z-40 flex w-full h-full transition-transform duration-500 ease-out bg-white start-0 border-slate-200/75 dark:border-slate-700/60 dark:bg-slate-900 sm:w-80 lg:translate-x-0 lg:shadow-none ltr:border-r ltr:lg:translate-x-0 rtl:border-l rtl:lg:translate-x-0"
 x-bind:class="{
   '-translate-x-full': !mobileSidebarOpen,
   'translate-x-0 shadow-lg': mobileSidebarOpen,
@@ -10,18 +10,18 @@ x-cloak
 >
 <!-- Mini Sidebar -->
 <div
-  class="w-16 flex-none border-slate-200/75 bg-slate-50 dark:border-slate-700/60 dark:bg-slate-900/75 ltr:border-r rtl:border-l"
+  class="flex-none w-16 border-slate-200/75 bg-slate-50 dark:border-slate-700/60 dark:bg-slate-900/75 ltr:border-r rtl:border-l"
 >
   <!-- Brand -->
   <a
     href="javascript:void(0)"
-    class="group flex h-16 items-center justify-center border-b border-slate-200/50 text-slate-500 hover:bg-slate-100 active:bg-slate-50 dark:border-slate-700/60 dark:hover:bg-slate-800 dark:hover:text-slate-400 dark:active:bg-slate-800/50"
+    class="flex items-center justify-center h-16 border-b group border-slate-200/50 text-slate-500 hover:bg-slate-100 active:bg-slate-50 dark:border-slate-700/60 dark:hover:bg-slate-800 dark:hover:text-slate-400 dark:active:bg-slate-800/50"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 49 48"
       fill="currentColor"
-      class="w-6 -rotate-6 transition group-active:rotate-0"
+      class="w-6 transition -rotate-6 group-active:rotate-0"
     >
       <path
         d="M24.5 12.75C24.5 18.963 19.463 24 13.25 24H2V12.75C2 6.537 7.037 1.5 13.25 1.5S24.5 6.537 24.5 12.75ZM24.5 35.25C24.5 29.037 29.537 24 35.75 24H47v11.25c0 6.213-5.037 11.25-11.25 11.25S24.5 41.463 24.5 35.25ZM2 35.25C2 41.463 7.037 46.5 13.25 46.5H24.5V35.25C24.5 29.037 19.463 24 13.25 24S2 29.037 2 35.25ZM47 12.75C47 6.537 41.963 1.5 35.75 1.5H24.5v11.25C24.5 18.963 29.537 24 35.75 24S47 18.963 47 12.75Z"
@@ -49,7 +49,7 @@ x-cloak
       x-bind:aria-selected="activeTab === 'Analytics' ? 'true' : 'false'"
       x-bind:tabindex="activeTab === 'Analytics' ? '0' : '-1'"
       type="button"
-      class="flex size-9 items-center justify-center rounded-xl bg-rose-700 text-white hover:bg-rose-600 active:bg-rose-700"
+      class="flex items-center justify-center text-white size-9 rounded-xl bg-rose-700 hover:bg-rose-600 active:bg-rose-700"
       x-bind:class="{
         'ring-4 ring-rose-400/50 dark:ring-rose-600/50': activeTab === 'Analytics'
       }"
@@ -58,7 +58,7 @@ x-cloak
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 16 16"
         fill="currentColor"
-        class="hi-micro hi-chart-bar inline-block size-4"
+        class="inline-block hi-micro hi-chart-bar size-4"
       >
         <path
           d="M12 2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-1ZM6.5 6a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V6ZM2 9a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V9Z"
@@ -74,7 +74,7 @@ x-cloak
       x-bind:aria-selected="activeTab === 'Projects' ? 'true' : 'false'"
       x-bind:tabindex="activeTab === 'Projects' ? '0' : '-1'"
       type="button"
-      class="flex size-9 items-center justify-center rounded-xl bg-indigo-800 text-white hover:bg-indigo-700 active:bg-indigo-800"
+      class="flex items-center justify-center text-white bg-indigo-800 size-9 rounded-xl hover:bg-indigo-700 active:bg-indigo-800"
       x-bind:class="{
         'ring-4 ring-indigo-400/50 dark:ring-indigo-600/50': activeTab === 'Projects'
       }"
@@ -83,7 +83,7 @@ x-cloak
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 16 16"
         fill="currentColor"
-        class="hi-micro hi-briefcase inline-block size-4"
+        class="inline-block hi-micro hi-briefcase size-4"
       >
         <path
           fill-rule="evenodd"
@@ -104,7 +104,7 @@ x-cloak
       x-bind:aria-selected="activeTab === 'Settings' ? 'true' : 'false'"
       x-bind:tabindex="activeTab === 'Settings' ? '0' : '-1'"
       type="button"
-      class="flex size-9 items-center justify-center rounded-xl bg-slate-700 text-white hover:bg-slate-600 active:bg-slate-700"
+      class="flex items-center justify-center text-white size-9 rounded-xl bg-slate-700 hover:bg-slate-600 active:bg-slate-700"
       x-bind:class="{
         'ring-4 ring-slate-400/50 dark:ring-slate-600/50': activeTab === 'Settings'
       }"
@@ -113,7 +113,7 @@ x-cloak
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 16 16"
         fill="currentColor"
-        class="hi-micro hi-cog-8-tooth inline-block size-4"
+        class="inline-block hi-micro hi-cog-8-tooth size-4"
       >
         <path
           fill-rule="evenodd"
@@ -124,13 +124,13 @@ x-cloak
     </button>
     <button
       type="button"
-      class="flex size-9 items-center justify-center rounded-xl border-2 border-dashed border-slate-200 text-slate-500 hover:border-slate-300 active:border-slate-200 dark:border-slate-700 dark:text-slate-400 dark:hover:border-slate-600 dark:active:border-slate-700"
+      class="flex items-center justify-center border-2 border-dashed size-9 rounded-xl border-slate-200 text-slate-500 hover:border-slate-300 active:border-slate-200 dark:border-slate-700 dark:text-slate-400 dark:hover:border-slate-600 dark:active:border-slate-700"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 16 16"
         fill="currentColor"
-        class="hi-micro hi-plus inline-block size-4"
+        class="inline-block hi-micro hi-plus size-4"
       >
         <path
           d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"
@@ -143,10 +143,10 @@ x-cloak
 <!-- END Mini Sidebar -->
 
 <!-- Sidebar Content -->
-<div class="grow overflow-auto">
+<div class="overflow-auto grow">
   <!-- Sidebar Header -->
   <div
-    class="flex h-16 items-center justify-between border-b border-slate-100 px-6 dark:border-slate-700/60"
+    class="flex items-center justify-between h-16 px-6 border-b border-slate-100 dark:border-slate-700/60"
   >
     <!-- Heading -->
     <div class="grow">
@@ -162,7 +162,7 @@ x-cloak
         x-on:click="mobileSidebarOpen = false"
       >
         <svg
-          class="hi-solid hi-x inline-block size-5"
+          class="inline-block hi-solid hi-x size-5"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -180,7 +180,7 @@ x-cloak
   <!-- END Sidebar Header -->
 
   <!-- Main Navigation -->
-  <div class="grow overflow-auto p-6">
+  <div class="p-6 overflow-auto grow">
     <!-- Analytics -->
     <div
       x-cloak
@@ -199,7 +199,7 @@ x-cloak
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          class="hi-mini hi-cube inline-block size-5 text-slate-600"
+          class="inline-block hi-mini hi-cube size-5 text-slate-600"
         >
           <path
             d="M10.362 1.093a.75.75 0 0 0-.724 0L2.523 5.018 10 9.143l7.477-4.125-7.115-3.925ZM18 6.443l-7.25 4v8.25l6.862-3.786A.75.75 0 0 0 18 14.25V6.443ZM9.25 18.693v-8.25l-7.25-4v7.807a.75.75 0 0 0 .388.657l6.862 3.786Z"
@@ -215,7 +215,7 @@ x-cloak
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          class="hi-mini hi-globe-alt inline-block size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
+          class="inline-block hi-mini hi-globe-alt size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
         >
           <path
             d="M16.555 5.412a8.028 8.028 0 0 0-3.503-2.81 14.899 14.899 0 0 1 1.663 4.472 8.547 8.547 0 0 0 1.84-1.662ZM13.326 7.825a13.43 13.43 0 0 0-2.413-5.773 8.087 8.087 0 0 0-1.826 0 13.43 13.43 0 0 0-2.413 5.773A8.473 8.473 0 0 0 10 8.5c1.18 0 2.304-.24 3.326-.675ZM6.514 9.376A9.98 9.98 0 0 0 10 10c1.226 0 2.4-.22 3.486-.624a13.54 13.54 0 0 1-.351 3.759A13.54 13.54 0 0 1 10 13.5c-1.079 0-2.128-.127-3.134-.366a13.538 13.538 0 0 1-.352-3.758ZM5.285 7.074a14.9 14.9 0 0 1 1.663-4.471 8.028 8.028 0 0 0-3.503 2.81c.529.638 1.149 1.199 1.84 1.66ZM17.334 6.798a7.973 7.973 0 0 1 .614 4.115 13.47 13.47 0 0 1-3.178 1.72 15.093 15.093 0 0 0 .174-3.939 10.043 10.043 0 0 0 2.39-1.896ZM2.666 6.798a10.042 10.042 0 0 0 2.39 1.896 15.196 15.196 0 0 0 .174 3.94 13.472 13.472 0 0 1-3.178-1.72 7.973 7.973 0 0 1 .615-4.115ZM10 15c.898 0 1.778-.079 2.633-.23a13.473 13.473 0 0 1-1.72 3.178 8.099 8.099 0 0 1-1.826 0 13.47 13.47 0 0 1-1.72-3.178c.855.151 1.735.23 2.633.23ZM14.357 14.357a14.912 14.912 0 0 1-1.305 3.04 8.027 8.027 0 0 0 4.345-4.345c-.953.542-1.971.981-3.04 1.305ZM6.948 17.397a8.027 8.027 0 0 1-4.345-4.345c.953.542 1.971.981 3.04 1.305a14.912 14.912 0 0 0 1.305 3.04Z"
@@ -231,7 +231,7 @@ x-cloak
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          class="hi-mini hi-arrows-right-left inline-block size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
+          class="inline-block hi-mini hi-arrows-right-left size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
         >
           <path
             fill-rule="evenodd"
@@ -249,7 +249,7 @@ x-cloak
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          class="hi-mini hi-chart-bar-square inline-block size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
+          class="inline-block hi-mini hi-chart-bar-square size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
         >
           <path
             fill-rule="evenodd"
@@ -260,7 +260,7 @@ x-cloak
         <span class="grow">Sales</span>
       </a>
       <h4
-        class="ps-3 pt-5 text-xs font-semibold uppercase tracking-wider text-slate-500"
+        class="pt-5 text-xs font-semibold tracking-wider uppercase ps-3 text-slate-500"
       >
         Quick Links
       </h4>
@@ -272,7 +272,7 @@ x-cloak
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          class="hi-mini hi-cursor-arrow-rays inline-block size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
+          class="inline-block hi-mini hi-cursor-arrow-rays size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
         >
           <path
             d="M10 1a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 1ZM5.05 3.05a.75.75 0 0 1 1.06 0l1.062 1.06A.75.75 0 1 1 6.11 5.173L5.05 4.11a.75.75 0 0 1 0-1.06ZM14.95 3.05a.75.75 0 0 1 0 1.06l-1.06 1.062a.75.75 0 0 1-1.062-1.061l1.061-1.06a.75.75 0 0 1 1.06 0ZM3 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 3 8ZM14 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 14 8ZM7.172 10.828a.75.75 0 0 1 0 1.061L6.11 12.95a.75.75 0 0 1-1.06-1.06l1.06-1.06a.75.75 0 0 1 1.06 0ZM10.766 7.51a.75.75 0 0 0-1.37.365l-.492 6.861a.75.75 0 0 0 1.204.65l1.043-.799.985 3.678a.75.75 0 0 0 1.45-.388l-.978-3.646 1.292.204a.75.75 0 0 0 .74-1.16l-3.874-5.764Z"
@@ -288,7 +288,7 @@ x-cloak
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          class="hi-mini hi-cursor-arrow-rays inline-block size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
+          class="inline-block hi-mini hi-cursor-arrow-rays size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
         >
           <path
             d="M10 1a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 1ZM5.05 3.05a.75.75 0 0 1 1.06 0l1.062 1.06A.75.75 0 1 1 6.11 5.173L5.05 4.11a.75.75 0 0 1 0-1.06ZM14.95 3.05a.75.75 0 0 1 0 1.06l-1.06 1.062a.75.75 0 0 1-1.062-1.061l1.061-1.06a.75.75 0 0 1 1.06 0ZM3 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 3 8ZM14 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 14 8ZM7.172 10.828a.75.75 0 0 1 0 1.061L6.11 12.95a.75.75 0 0 1-1.06-1.06l1.06-1.06a.75.75 0 0 1 1.06 0ZM10.766 7.51a.75.75 0 0 0-1.37.365l-.492 6.861a.75.75 0 0 0 1.204.65l1.043-.799.985 3.678a.75.75 0 0 0 1.45-.388l-.978-3.646 1.292.204a.75.75 0 0 0 .74-1.16l-3.874-5.764Z"
@@ -304,7 +304,7 @@ x-cloak
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          class="hi-mini hi-cursor-arrow-rays inline-block size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
+          class="inline-block hi-mini hi-cursor-arrow-rays size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
         >
           <path
             d="M10 1a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 1ZM5.05 3.05a.75.75 0 0 1 1.06 0l1.062 1.06A.75.75 0 1 1 6.11 5.173L5.05 4.11a.75.75 0 0 1 0-1.06ZM14.95 3.05a.75.75 0 0 1 0 1.06l-1.06 1.062a.75.75 0 0 1-1.062-1.061l1.061-1.06a.75.75 0 0 1 1.06 0ZM3 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 3 8ZM14 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 14 8ZM7.172 10.828a.75.75 0 0 1 0 1.061L6.11 12.95a.75.75 0 0 1-1.06-1.06l1.06-1.06a.75.75 0 0 1 1.06 0ZM10.766 7.51a.75.75 0 0 0-1.37.365l-.492 6.861a.75.75 0 0 0 1.204.65l1.043-.799.985 3.678a.75.75 0 0 0 1.45-.388l-.978-3.646 1.292.204a.75.75 0 0 0 .74-1.16l-3.874-5.764Z"
@@ -320,7 +320,7 @@ x-cloak
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          class="hi-mini hi-cursor-arrow-rays inline-block size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
+          class="inline-block hi-mini hi-cursor-arrow-rays size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
         >
           <path
             d="M10 1a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 1ZM5.05 3.05a.75.75 0 0 1 1.06 0l1.062 1.06A.75.75 0 1 1 6.11 5.173L5.05 4.11a.75.75 0 0 1 0-1.06ZM14.95 3.05a.75.75 0 0 1 0 1.06l-1.06 1.062a.75.75 0 0 1-1.062-1.061l1.061-1.06a.75.75 0 0 1 1.06 0ZM3 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 3 8ZM14 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 14 8ZM7.172 10.828a.75.75 0 0 1 0 1.061L6.11 12.95a.75.75 0 0 1-1.06-1.06l1.06-1.06a.75.75 0 0 1 1.06 0ZM10.766 7.51a.75.75 0 0 0-1.37.365l-.492 6.861a.75.75 0 0 0 1.204.65l1.043-.799.985 3.678a.75.75 0 0 0 1.45-.388l-.978-3.646 1.292.204a.75.75 0 0 0 .74-1.16l-3.874-5.764Z"
@@ -336,7 +336,7 @@ x-cloak
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          class="hi-mini hi-cursor-arrow-rays inline-block size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
+          class="inline-block hi-mini hi-cursor-arrow-rays size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
         >
           <path
             d="M10 1a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 1ZM5.05 3.05a.75.75 0 0 1 1.06 0l1.062 1.06A.75.75 0 1 1 6.11 5.173L5.05 4.11a.75.75 0 0 1 0-1.06ZM14.95 3.05a.75.75 0 0 1 0 1.06l-1.06 1.062a.75.75 0 0 1-1.062-1.061l1.061-1.06a.75.75 0 0 1 1.06 0ZM3 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 3 8ZM14 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 14 8ZM7.172 10.828a.75.75 0 0 1 0 1.061L6.11 12.95a.75.75 0 0 1-1.06-1.06l1.06-1.06a.75.75 0 0 1 1.06 0ZM10.766 7.51a.75.75 0 0 0-1.37.365l-.492 6.861a.75.75 0 0 0 1.204.65l1.043-.799.985 3.678a.75.75 0 0 0 1.45-.388l-.978-3.646 1.292.204a.75.75 0 0 0 .74-1.16l-3.874-5.764Z"
@@ -362,7 +362,7 @@ x-cloak
         class="group flex items-center gap-2.5 rounded-lg px-2.5 py-1.5 text-sm font-medium text-slate-800 hover:bg-slate-100 active:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-800/75 dark:active:text-white"
       >
         <svg
-          class="hi-mini hi-squares-plus inline-block size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
+          class="inline-block hi-mini hi-squares-plus size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -379,7 +379,7 @@ x-cloak
         class="group flex items-center gap-2.5 rounded-lg px-2.5 py-1.5 text-sm font-medium text-slate-800 hover:bg-slate-100 active:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-800/75 dark:active:text-white"
       >
         <svg
-          class="hi-mini hi-bell-alert inline-block size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
+          class="inline-block hi-mini hi-bell-alert size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -402,7 +402,7 @@ x-cloak
         class="group flex items-center gap-2.5 rounded-lg px-2.5 py-1.5 text-sm font-medium text-slate-800 hover:bg-slate-100 active:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-800/75 dark:active:text-white"
       >
         <svg
-          class="hi-mini hi-calendar-days inline-block size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
+          class="inline-block hi-mini hi-calendar-days size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -424,7 +424,7 @@ x-cloak
         class="group flex items-center gap-2.5 rounded-lg px-2.5 py-1.5 text-sm font-medium text-slate-800 hover:bg-slate-100 active:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-800/75 dark:active:text-white"
       >
         <svg
-          class="hi-mini hi-archive-box inline-block size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
+          class="inline-block hi-mini hi-archive-box size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -446,7 +446,7 @@ x-cloak
         class="group flex items-center gap-2.5 rounded-lg px-2.5 py-1.5 text-sm font-medium text-slate-800 hover:bg-slate-100 active:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-800/75 dark:active:text-white"
       >
         <svg
-          class="hi-mini hi-list-bullet inline-block size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
+          class="inline-block hi-mini hi-list-bullet size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -461,7 +461,7 @@ x-cloak
         <span class="grow">Tasks</span>
       </a>
       <h4
-        class="ps-3 pt-5 text-xs font-semibold uppercase tracking-wider text-slate-500"
+        class="pt-5 text-xs font-semibold tracking-wider uppercase ps-3 text-slate-500"
       >
         Labels
       </h4>
@@ -470,7 +470,7 @@ x-cloak
         class="group flex items-center gap-2.5 rounded-lg px-2.5 py-1 text-sm font-medium text-slate-800 hover:bg-emerald-50 hover:text-emerald-600 dark:text-slate-300 dark:hover:bg-emerald-800/75 dark:active:text-white"
       >
         <svg
-          class="hi-mini hi-hashtag inline-block size-5 text-slate-300 group-hover:text-emerald-600"
+          class="inline-block hi-mini hi-hashtag size-5 text-slate-300 group-hover:text-emerald-600"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -489,7 +489,7 @@ x-cloak
         class="group flex items-center gap-2.5 rounded-lg px-2.5 py-1 text-sm font-medium text-slate-800 hover:bg-blue-50 hover:text-blue-600 dark:text-slate-300 dark:hover:bg-blue-800/75 dark:active:text-white"
       >
         <svg
-          class="hi-mini hi-hashtag inline-block size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
+          class="inline-block hi-mini hi-hashtag size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -508,7 +508,7 @@ x-cloak
         class="group flex items-center gap-2.5 rounded-lg px-2.5 py-1 text-sm font-medium text-slate-800 hover:bg-sky-50 hover:text-sky-600 dark:text-slate-300 dark:hover:bg-sky-800/75 dark:active:text-white"
       >
         <svg
-          class="hi-mini hi-hashtag inline-block size-5 text-slate-300 group-hover:text-sky-600"
+          class="inline-block hi-mini hi-hashtag size-5 text-slate-300 group-hover:text-sky-600"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -527,7 +527,7 @@ x-cloak
         class="group flex items-center gap-2.5 rounded-lg px-2.5 py-1 text-sm font-medium text-slate-800 hover:bg-orange-50 hover:text-orange-600 dark:text-slate-300 dark:hover:bg-orange-800/75 dark:active:text-white"
       >
         <svg
-          class="hi-mini hi-hashtag inline-block size-5 text-slate-300 group-hover:text-orange-600"
+          class="inline-block hi-mini hi-hashtag size-5 text-slate-300 group-hover:text-orange-600"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -546,7 +546,7 @@ x-cloak
         class="group flex items-center gap-2.5 rounded-lg px-2.5 py-1 text-sm font-medium text-slate-800 hover:bg-rose-50 hover:text-rose-600 dark:text-slate-300 dark:hover:bg-rose-800/75 dark:active:text-white"
       >
         <svg
-          class="hi-mini hi-hashtag inline-block size-5 text-slate-300 group-hover:text-rose-600"
+          class="inline-block hi-mini hi-hashtag size-5 text-slate-300 group-hover:text-rose-600"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -565,7 +565,7 @@ x-cloak
         class="group flex items-center gap-2.5 rounded-lg px-2.5 py-1 text-sm font-medium text-slate-800 hover:bg-purple-50 hover:text-purple-600 dark:text-slate-300 dark:hover:bg-purple-800/75 dark:active:text-white"
       >
         <svg
-          class="hi-mini hi-hashtag inline-block size-5 text-slate-300 group-hover:text-purple-600"
+          class="inline-block hi-mini hi-hashtag size-5 text-slate-300 group-hover:text-purple-600"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -584,7 +584,7 @@ x-cloak
         class="group flex items-center gap-2.5 rounded-lg px-2.5 py-1 text-sm font-medium text-slate-800 hover:bg-pink-50 hover:text-pink-600 dark:text-slate-300 dark:hover:bg-pink-800/75 dark:active:text-white"
       >
         <svg
-          class="hi-mini hi-hashtag inline-block size-5 text-slate-300 group-hover:text-pink-600"
+          class="inline-block hi-mini hi-hashtag size-5 text-slate-300 group-hover:text-pink-600"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -619,7 +619,7 @@ x-cloak
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          class="hi-mini hi-user-circle inline-block size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
+          class="inline-block hi-mini hi-user-circle size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
         >
           <path
             fill-rule="evenodd"
@@ -637,7 +637,7 @@ x-cloak
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          class="hi-mini hi-shield-check inline-block size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
+          class="inline-block hi-mini hi-shield-check size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
         >
           <path
             fill-rule="evenodd"
@@ -655,7 +655,7 @@ x-cloak
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          class="hi-mini hi-cog inline-block size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
+          class="inline-block hi-mini hi-cog size-5 text-slate-300 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-300"
         >
           <path
             d="M13.024 9.25c.47 0 .827-.433.637-.863a4 4 0 0 0-4.094-2.364c-.468.05-.665.576-.43.984l1.08 1.868a.75.75 0 0 0 .649.375h2.158ZM7.84 7.758c-.236-.408-.79-.5-1.068-.12A3.982 3.982 0 0 0 6 10c0 .884.287 1.7.772 2.363.278.38.832.287 1.068-.12l1.078-1.868a.75.75 0 0 0 0-.75L7.839 7.758ZM9.138 12.993c-.235.408-.039.934.43.984a4 4 0 0 0 4.094-2.364c.19-.43-.168-.863-.638-.863h-2.158a.75.75 0 0 0-.65.375l-1.078 1.868Z"
